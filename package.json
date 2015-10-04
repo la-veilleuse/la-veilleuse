@@ -1,21 +1,28 @@
 {
-  "name": "poneycase",
+  "name": "laVeilleuse",
   "version": "0.0.0",
   "description": "Le blog qui roxx du poney !",
   "main": "index.js",
+  "engines": {
+    "node": ">= 4.2.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node build",
+    "predeploy": "NODE_ENV=production npm run build",
+    "deploy": "./scripts/deploy-to-github-pages.sh",
+    "start": "node build serve watch",
+    "test": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/poneyCase/poneyCase.git"
+    "url": "git+https://github.com/la-veilleuse/la-veilleuse.git"
   },
   "keywords": [
     "blog",
     "technique",
     "javascript"
   ],
-  "author": "poneyCase",
+  "author": "La veilleuse",
   "contributors": [
     {
       "name": "FBerthelot"
@@ -26,8 +33,43 @@
   ],
   "license": "Unlicense",
   "bugs": {
-    "url": "https://github.com/poneyCase/poneyCase/issues"
+    "url": "https://github.com/la-veilleuse/la-veilleuse/issues"
   },
-  "homepage": "http://poneycase.github.io/poneyCase",
-  "private": true
+  "homepage": "http://la-veilleuse.github.io/la-veilleuse",
+  "private": true,
+  "devDependencies": {
+    "handlebars": "^4.0.3",
+    "highlight.js": "^9.2.0",
+    "markdown-it-abbr": "^1.0.0",
+    "markdown-it-container": "^2.0.0",
+    "markdown-it-deflist": "^2.0.0",
+    "markdown-it-footnote": "^2.0.0",
+    "markdown-it-sub": "^1.0.0",
+    "markdown-it-sup": "^1.0.0",
+    "metalsmith": "^2.1.0",
+    "metalsmith-assets": "^0.1.0",
+    "metalsmith-autoprefixer": "^1.1.0",
+    "metalsmith-browser-sync": "^1.1.0",
+    "metalsmith-clean-css": "^2.0.0",
+    "metalsmith-collections": "^0.7.0",
+    "metalsmith-drafts": "0.0.1",
+    "metalsmith-each": "^0.1.1",
+    "metalsmith-excerpts": "^1.0.0",
+    "metalsmith-filemetadata": "1.0.0",
+    "metalsmith-html-minifier": "^2.0.0",
+    "metalsmith-ignore": "^0.1.2",
+    "metalsmith-layouts": "^1.4.1",
+    "metalsmith-markdownit": "^0.3.0",
+    "metalsmith-more": "^0.2.0",
+    "metalsmith-pagination": "^1.4.0",
+    "metalsmith-partial": "^0.1.0",
+    "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-serve": "0.0.7",
+    "metalsmith-watch": "^1.0.1",
+    "moment": "^2.12.0",
+    "rimraf": "^2.4.4"
+  },
+  "dependencies": {
+    "highlightjs": "^8.7.0"
+  }
 }

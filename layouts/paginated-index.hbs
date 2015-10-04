@@ -1,0 +1,49 @@
+{{> header}}
+
+    <ul>
+
+        {{#each pagination.files}}
+        <li class="articles-list-item">
+            <h2 class="articles-list-item-title"><a href="{{baseUrl}}{{this.path}}/" title="{{this.title}}">{{this.title}}</a></h2>
+            <time datetime="{{ dateFormat this.date }}" class="articles-list-item-datetime">{{ dateFormat this.date }}</time>
+            {{{this.less}}}
+            <div class="articles-list-item-read-more">
+                <a href="{{baseUrl}}{{this.path}}/">Lire l'article</a>
+            </div>
+        </li>
+        {{/each}}
+
+    </ul>
+
+
+    <ul class="pagination">
+
+        {{#if pagination.previous}}
+            <li class="pagination-item">
+                <a class="pagination-item-link" href="{{baseUrl}}{{pagination.previous.path}}">Précédente</a>
+            </li>
+        {{else}}
+            <li class="pagination-item pagination-item--inactive">
+                <span>Précédente</span>
+            </li>
+        {{/if}}
+
+        {{#each pagination.pages}}
+            <li class="pagination-item {{classIfEquals 'pagination-item--active' ../pagination.num this.pagination.num}}">
+                <a class="pagination-item-link" href="{{baseUrl}}{{this.path}}">{{this.pagination.num}}</a>
+            </li>
+        {{/each}}
+
+        {{#if pagination.next}}
+            <li class="pagination-item">
+                <a class="pagination-item-link" href="{{baseUrl}}{{pagination.next.path}}">Suivante</a>
+            </li>
+        {{else}}
+            <li class="pagination-item pagination-item--inactive">
+                <span>Suivante</span>
+            </li>
+        {{/if}}
+
+    </ul>
+
+{{> footer}}
