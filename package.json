@@ -4,7 +4,7 @@
   "description": "Le blog qui roxx du poney !",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node --harmony build.js"
   },
   "repository": {
     "type": "git",
@@ -29,5 +29,9 @@
     "url": "https://github.com/poneyCase/poneyCase/issues"
   },
   "homepage": "http://poneycase.github.io/poneyCase",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "metalsmith": "^2.1.0",
+    "metalsmith-assets": "^0.1.0"
+  }
 }
