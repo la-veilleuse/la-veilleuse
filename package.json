@@ -1,0 +1,33 @@
+{
+  "name": "poneycase",
+  "version": "0.0.0",
+  "description": "Le blog qui roxx du poney !",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poneyCase/poneyCase.git"
+  },
+  "keywords": [
+    "blog",
+    "technique",
+    "javascript"
+  ],
+  "author": "poneyCase",
+  "contributors": [
+    {
+      "name": "FBerthelot"
+    },
+    {
+      "name": "jgrenat"
+    }
+  ],
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/poneyCase/poneyCase/issues"
+  },
+  "homepage": "http://poneycase.github.io/poneyCase",
+  "private": true
+}
