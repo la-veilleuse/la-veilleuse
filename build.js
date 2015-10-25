@@ -12,6 +12,10 @@ Metalsmith(__dirname)
     .source(path.join(__dirname, 'src'))
     .ignore('src/layouts/**/*')
     .use(assets({
+        source: 'src/styles',
+        destination: 'styles'
+    }))
+    .use(assets({
         source: 'src/assets',
         destination: 'assets'
     }))

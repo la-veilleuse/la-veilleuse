@@ -3,14 +3,27 @@
 <head>
 	<meta charset=utf-8>
 	<meta name=viewport content="width=device-width, initial-scale=1">
+
+    <link href="/styles/reset.css" rel='stylesheet' type='text/css'>
+    <link href="/styles/style.css" rel='stylesheet' type='text/css'>
+
 	<title>{{title}} - PoneyCase</title>
 </head>
 <body>
-	<h1>{{title}}</h1>
-	{{{contents}}}
+    <header>
+        <h1><img src="/assets/common/logo.png"></h1>
+        <a target="_blank" href="https://github.com/poneyCase/poney-case"><img src="/assets/common/github.png" alt="Notre GitHub"></a>
+    </header>
+    <section id="main">
+        <h2>{{title}}</h2>
+        {{{contents}}}
+        <div id="disqus_thread"></div>
+    </section>
+    <footer>
+        <a href="{{authorUrl}}">{{authorName}}</a>
+        <p>{{authorBio}}</p>
+    </footer>
 
-
-	<div id="disqus_thread"></div>
 	<script type="text/javascript">
 	    /*   CONFIGURATION VARIABLES   */
 	    var disqus_shortname = 'poneycase';
