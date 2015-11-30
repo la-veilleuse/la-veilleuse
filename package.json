@@ -3,8 +3,11 @@
   "version": "0.0.0",
   "description": "Le blog qui roxx du poney !",
   "main": "index.js",
+  "engines": {
+    "node": ">= 4.2.0"
+  },
   "scripts": {
-    "build": "node --harmony build.js"
+    "build": "node build.js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/poneyCase/poneyCase/issues"
   },
-  "homepage": "http://poneycase.github.io/poneyCase",
+  "homepage": "http://poneycase.github.io/poney-case",
   "private": true,
   "devDependencies": {
     "handlebars": "^4.0.3",
