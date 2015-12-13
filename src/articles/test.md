@@ -1,8 +1,6 @@
 ---
-title: Exemple d'article
-authorName: FBE & JGR
-authorUrl: http://google.com
-authorBio: deux beaux gosses
+title: Exemple d'article 2
+author: FBE & JGR
 ---
 
 # h1 Heading 8-)

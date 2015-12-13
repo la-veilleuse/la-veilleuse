@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset=utf-8>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+
+    <link href="{{baseUrl}}styles/reset.css" rel='stylesheet' type='text/css'>
+    <link href="{{baseUrl}}styles/style.css" rel='stylesheet' type='text/css'>
+    <link href="{{baseUrl}}styles/darkula.css" rel="stylesheet" type="text/css">
+
+	<title>La Veilleuse</title>
+</head>
+<body>
+    <header>
+        <h1 class="website-title"><a href="{{baseUrl}}">La Veilleuse</a></h1>
+        <nav>
+            <ul>
+                <li><a href="https://github.com/poneyCase/poney-case"><img src="/assets/common/github.png"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="main">

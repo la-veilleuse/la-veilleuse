@@ -1,0 +1,13 @@
+
+    </section>
+    <footer>
+           <ul>
+               <li><a>L'équipe</a></li>
+               <li><a>A propos</a></li>
+           </ul>
+        <p class="legal-info"><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/">La veilleuse est sous CC-BY-NC-ND</a></p>
+    </footer>
+</body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</html>
