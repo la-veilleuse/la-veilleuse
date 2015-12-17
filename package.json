@@ -7,7 +7,9 @@
     "node": ">= 4.2.0"
   },
   "scripts": {
-    "build": "node build.js"
+    "build": "NODE_ENV=production node build.js",
+    "predeploy": "npm run build",
+    "deploy": "./scripts/deploy-to-github-pages.sh"
   },
   "repository": {
     "type": "git",

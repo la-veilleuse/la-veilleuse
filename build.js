@@ -1,5 +1,7 @@
 'use strict';
 
+const PROD = 'production';
+
 const Handlebars = require('handlebars');
 const fs = require('fs');
 const Metalsmith = require('metalsmith');
@@ -22,7 +24,11 @@ const htmlMinifier = require('metalsmith-html-minifier');
 const cleanCss = require('metalsmith-clean-css');
 
 const moment = require('moment');
-const baseUrl = 'http://poneycase.github.io/poney-case/';
+
+const env = process.env.NODE_ENV;
+const baseUrl = env === PROD
+    ? 'http://poneycase.github.io/poney-case/'
+    : 'http://localhost:8080/';
 
 
 // Handlebars configuration
@@ -131,9 +137,11 @@ metalsmithPipeline
     }));
 
 // Minify in production
-metalsmithPipeline
-    .use(cleanCss())
-    .use(htmlMinifier());
+if(env === PROD) {
+    metalsmithPipeline
+        .use(cleanCss())
+        .use(htmlMinifier());
+}
 
 // Build
 metalsmithPipeline
