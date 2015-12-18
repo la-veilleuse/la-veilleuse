@@ -10,4 +10,5 @@
 </body>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
+{{#isWatch}}<script src="http://localhost:35729/livereload.js"></script>{{/isWatch}}
 </html>

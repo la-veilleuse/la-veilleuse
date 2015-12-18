@@ -22,23 +22,20 @@ const autoprefixer = require('metalsmith-autoprefixer');
 
 const htmlMinifier = require('metalsmith-html-minifier');
 const cleanCss = require('metalsmith-clean-css');
+const serve = require('metalsmith-serve');
+const watch = require('metalsmith-watch');
 
 const moment = require('moment');
 
+const buildTarget = './build';
 const env = process.env.NODE_ENV;
+const args = process.argv.slice(2);
+const isWatch = args.some(arg => arg.includes('watch'));
+const isServe = args.some(arg => arg.includes('serve'));
+
 const baseUrl = env === PROD
     ? 'http://poneycase.github.io/poney-case/'
     : 'http://localhost:8080/';
-
-
-// Handlebars configuration
-Handlebars.registerPartial({
-  'header': fs.readFileSync('./layouts/partials/header.hbt').toString(),
-  'footer': fs.readFileSync('./layouts/partials/footer.hbt').toString()
-});
-Handlebars.registerHelper('baseUrl', () => baseUrl);
-Handlebars.registerHelper('dateFormat', context => moment(context).format('LL'));
-Handlebars.registerHelper('activeIfCurrent', (current, page) => current === page ? 'active' : '');
 
 
 let md = markdown({
@@ -85,6 +82,20 @@ md.parser
     }
 })*/;
 
+// Handlebars configuration
+const configureHandlebars = () => {
+    Handlebars.registerPartial({
+      'header': fs.readFileSync('./layouts/partials/header.hbt').toString(),
+      'footer': fs.readFileSync('./layouts/partials/footer.hbt').toString()
+    });
+    Handlebars.registerHelper('baseUrl', () => baseUrl);
+    Handlebars.registerHelper('isWatch', function(options) {
+        return options[isWatch ? 'fn' : 'inverse'](this);
+    });
+    Handlebars.registerHelper('dateFormat', context => moment(context).format('LL'));
+    Handlebars.registerHelper('activeIfCurrent', (current, page) => current === page ? 'active' : '');
+};
+
 // Use excerpt if there is no <!-- more --> tag
 const excerptIfNotMore = each((file, filename) => {
     if(filename.endsWith('.html')) {
@@ -93,8 +104,11 @@ const excerptIfNotMore = each((file, filename) => {
 });
 
 
-// Articles
 const metalsmithPipeline = Metalsmith(__dirname)
+    .use(configureHandlebars);
+
+// Articles
+metalsmithPipeline
     .use(fileMetadata([{
         pattern: 'articles/*.md',
         metadata: {
@@ -143,9 +157,30 @@ if(env === PROD) {
         .use(htmlMinifier());
 }
 
+// Watch mode
+if(isWatch) {
+    metalsmithPipeline
+        .use(watch({
+            paths: {
+                'src/**/*': true,
+                'layouts/**/*': true,
+            },
+            livereload: true,
+        }));
+}
+
+// Serve mode
+if(isServe) {
+    metalsmithPipeline
+        .use(serve({
+            port: 8080,
+            verbose: true,
+        }));
+}
+
 // Build
 metalsmithPipeline
-    .destination('./build')
+    .destination(buildTarget)
     .build(err => {
         if(err) {
             throw err;
