@@ -26,6 +26,7 @@ const serve = require('metalsmith-serve');
 const watch = require('metalsmith-watch');
 
 const moment = require('moment');
+moment.locale('fr');
 
 const buildTarget = './build';
 const env = process.env.NODE_ENV;
@@ -85,15 +86,15 @@ md.parser
 // Handlebars configuration
 const configureHandlebars = () => {
     Handlebars.registerPartial({
-      'header': fs.readFileSync('./layouts/partials/header.hbt').toString(),
-      'footer': fs.readFileSync('./layouts/partials/footer.hbt').toString()
+      'header': fs.readFileSync('./layouts/partials/header.hbs').toString(),
+      'footer': fs.readFileSync('./layouts/partials/footer.hbs').toString()
     });
     Handlebars.registerHelper('baseUrl', () => baseUrl);
     Handlebars.registerHelper('isWatch', function(options) {
         return options[isWatch ? 'fn' : 'inverse'](this);
     });
     Handlebars.registerHelper('dateFormat', context => moment(context).format('LL'));
-    Handlebars.registerHelper('activeIfCurrent', (current, page) => current === page ? 'active' : '');
+    Handlebars.registerHelper('classIfEquals', (className, first, second) => first === second ? className : '');
 };
 
 // Use excerpt if there is no <!-- more --> tag
@@ -112,7 +113,7 @@ metalsmithPipeline
     .use(fileMetadata([{
         pattern: 'articles/*.md',
         metadata: {
-            layout: 'article.hbt'
+            layout: 'article.hbs'
         }
     }]))
     .use(drafts())
@@ -131,7 +132,7 @@ metalsmithPipeline
     .use(pagination({
         'collections.articles': {
             perPage: 9,
-            layout: 'paginated-index.hbt',
+            layout: 'paginated-index.hbs',
             first: 'index.html',
             path: 'index-:num.html'
         }

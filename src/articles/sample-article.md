@@ -1,6 +1,7 @@
 ---
 title: Exemple d'article
 author: FBE & JGR
+date: 2015-12-18
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quis sequi accusantium, corrupti odio cumque unde, incidunt obcaecati tempora culpa vel blanditiis rem optio aut, impedit perspiciatis recusandae. Earum, similique itaque ratione quibusdam explicabo quis ex. Quos obcaecati, pariatur maiores quia dolorem adipisci earum doloribus veritatis suscipit, officia velit voluptates porro, nulla libero explicabo et laudantium. Quos fuga sapiente, molestias.

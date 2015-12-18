@@ -1,10 +1,13 @@
 ---
-title: Exemple d'article 2
+title: Style Guide
 author: FBE & JGR
+date: 2000-01-01
 ---
 
-# h1 Heading 8-)
-## h2 Heading
+Article destiné à tester les styles du site. A laisser en draft.
+
+<!-- more -->
+
 ### h3 Heading
 #### h4 Heading
 ##### h5 Heading
