@@ -1,6 +1,6 @@
 #La veilleuse blog
 
-[![Build Status](https://travis-ci.org/poneyCase/poneyCase.svg)](https://travis-ci.org/poneyCase/poneyCase)
+[![Build Status](https://travis-ci.org/la-veilleuse/la-veilleuse.svg?branch=master)](https://travis-ci.org/la-veilleuse/la-veilleuse)
 
 
 ##Idées de noms

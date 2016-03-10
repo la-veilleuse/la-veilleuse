@@ -1,12 +1,43 @@
 'use strict';
 
-let Metalsmith = require('metalsmith');
-let assets = require('metalsmith-assets');
-let markdown = require('metalsmith-markdownit');
-let layouts = require('metalsmith-layouts');
-let path = require('path');
-let moveUp = require('metalsmith-move-up');
-let hljs = require('highlight.js');
+const PROD = 'production';
+
+const Handlebars = require('handlebars');
+const fs = require('fs');
+const Metalsmith = require('metalsmith');
+const assets = require('metalsmith-assets');
+const markdown = require('metalsmith-markdownit');
+const layouts = require('metalsmith-layouts');
+const hljs = require('highlight.js');
+const collections = require('metalsmith-collections');
+const excerpts = require('metalsmith-excerpts');
+const pagination = require('metalsmith-pagination');
+const permalinks = require('metalsmith-permalinks');
+const more = require('metalsmith-more');
+const each = require('metalsmith-each');
+const fileMetadata = require('metalsmith-filemetadata');
+const drafts = require('metalsmith-drafts');
+const ignore = require('metalsmith-ignore');
+const autoprefixer = require('metalsmith-autoprefixer');
+
+const htmlMinifier = require('metalsmith-html-minifier');
+const cleanCss = require('metalsmith-clean-css');
+const serve = require('metalsmith-serve');
+const watch = require('metalsmith-watch');
+
+const moment = require('moment');
+moment.locale('fr');
+
+const buildTarget = './build';
+const env = process.env.NODE_ENV;
+const args = process.argv.slice(2);
+const isWatch = args.some(arg => arg.includes('watch'));
+const isServe = args.some(arg => arg.includes('serve'));
+
+const baseUrl = env === PROD
+    ? 'http://la-veilleuse.github.io/la-veilleuse/'
+    : 'http://localhost:8080/';
+
 
 let md = markdown({
     typographer: true,
@@ -26,6 +57,7 @@ let md = markdown({
         return ''; // use external default escaping
     }
 });
+
 md.parser
     .use(require('markdown-it-sub'))
     .use(require('markdown-it-sup'))
@@ -51,35 +83,111 @@ md.parser
     }
 })*/;
 
-Metalsmith(__dirname)
-    .source(path.join(__dirname, 'src'))
-    .ignore('src/layouts/**/*')
-    .use(assets({
-        source: 'src/styles',
-        destination: 'styles'
+// Handlebars configuration
+const configureHandlebars = () => {
+    Handlebars.registerPartial({
+      'header': fs.readFileSync('./layouts/partials/header.hbs').toString(),
+      'footer': fs.readFileSync('./layouts/partials/footer.hbs').toString()
+    });
+    Handlebars.registerHelper('baseUrl', () => baseUrl);
+    Handlebars.registerHelper('isWatch', function(options) {
+        return options[isWatch ? 'fn' : 'inverse'](this);
+    });
+    Handlebars.registerHelper('dateFormat', context => moment(context).format('LL'));
+    Handlebars.registerHelper('classIfEquals', (className, first, second) => first === second ? className : '');
+};
+
+// Use excerpt if there is no <!-- more --> tag
+const excerptIfNotMore = each((file, filename) => {
+    if(filename.endsWith('.html')) {
+        file.less = file.less || file.excerpt;
+    }
+});
+
+
+const metalsmithPipeline = Metalsmith(__dirname)
+    .use(configureHandlebars);
+
+// Articles
+metalsmithPipeline
+    .use(fileMetadata([{
+        pattern: 'articles/*.md',
+        metadata: {
+            layout: 'article.hbs'
+        }
+    }]))
+    .use(drafts())
+    .use(collections({
+        articles: {
+            pattern: 'articles/*.md',
+            sortBy: 'date',
+            reverse: true
+        }
     }))
+    .use(md)
+    .use(permalinks({
+        pattern: 'articles/:title',
+        relative: false
+    }))
+    .use(pagination({
+        'collections.articles': {
+            perPage: 9,
+            layout: 'paginated-index.hbs',
+            first: 'index.html',
+            path: 'index-:num.html'
+        }
+    }))
+    .use(ignore(['index-1.html']))
+    .use(excerpts())
+    .use(more())
+    .use(excerptIfNotMore)
+    .use(layouts('handlebars'));
+
+// CSS
+metalsmithPipeline
+    .use(autoprefixer())
     .use(assets({
-        source: 'src/assets',
-        destination: 'assets'
+        source: 'node_modules/highlightjs/',
+        destination: 'lib/highlightjs'
     }))
     .use(assets({
         source: 'node_modules/highlight.js/styles',
         destination: 'styles'
-    }))
-    .use(md)
-    .use(layouts({
-        'engine': 'handlebars',
-        'directory': 'src',
-        'default': 'layouts/article-layout.html.hbs',
-        'pattern': 'articles/**/*'
-    }))
-    .use(layouts({
-        'engine': 'handlebars',
-        'directory': 'src',
-        'default': 'layouts/page-layout.html.hbs',
-        'pattern': 'pages/**/*'
-    }))
-    .use(moveUp('pages/**/*'))
-    .build(function(err) {
-        if (err) throw err;
+    }));
+
+// Minify in production
+if(env === PROD) {
+    metalsmithPipeline
+        .use(cleanCss())
+        .use(htmlMinifier());
+}
+
+// Watch mode
+if(isWatch) {
+    metalsmithPipeline
+        .use(watch({
+            paths: {
+                'src/**/*': true,
+                'layouts/**/*': true,
+            },
+            livereload: true,
+        }));
+}
+
+// Serve mode
+if(isServe) {
+    metalsmithPipeline
+        .use(serve({
+            port: 8080,
+            verbose: true,
+        }));
+}
+
+// Build
+metalsmithPipeline
+    .destination(buildTarget)
+    .build(err => {
+        if(err) {
+            throw err;
+        }
     });
