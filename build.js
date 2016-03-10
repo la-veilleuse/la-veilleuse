@@ -35,7 +35,7 @@ const isWatch = args.some(arg => arg.includes('watch'));
 const isServe = args.some(arg => arg.includes('serve'));
 
 const baseUrl = env === PROD
-    ? 'http://poneycase.github.io/poney-case/'
+    ? 'http://la-veilleuse.github.io/la-veilleuse/'
     : 'http://localhost:8080/';
 
 
@@ -146,6 +146,10 @@ metalsmithPipeline
 // CSS
 metalsmithPipeline
     .use(autoprefixer())
+    .use(assets({
+        source: 'node_modules/highlightjs/',
+        destination: 'lib/highlightjs'
+    }))
     .use(assets({
         source: 'node_modules/highlight.js/styles',
         destination: 'styles'

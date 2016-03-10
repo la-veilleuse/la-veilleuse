@@ -10,12 +10,12 @@
     "build": "node build",
     "predeploy": "NODE_ENV=production npm run build",
     "deploy": "./scripts/deploy-to-github-pages.sh",
-    "serve": "node build serve watch",
+    "start": "node build serve watch",
     "test": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/poneyCase/poneyCase.git"
+    "url": "git+https://github.com/la-veilleuse/la-veilleuse.git"
   },
   "keywords": [
     "blog",
@@ -33,13 +33,14 @@
   ],
   "license": "Unlicense",
   "bugs": {
-    "url": "https://github.com/poneyCase/poneyCase/issues"
+    "url": "https://github.com/la-veilleuse/la-veilleuse/issues"
   },
-  "homepage": "http://poneycase.github.io/poney-case",
+  "homepage": "http://la-veilleuse.github.io/la-veilleuse",
   "private": true,
   "devDependencies": {
     "handlebars": "^4.0.3",
-    "highlight.js": "^8.9.1",
+    "highlight.js": "^9.2.0",
+    "highlightjs": "^8.7.0",
     "markdown-it-abbr": "^1.0.0",
     "markdown-it-container": "^2.0.0",
     "markdown-it-deflist": "^2.0.0",
