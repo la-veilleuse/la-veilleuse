@@ -2,6 +2,10 @@ language: node_js
 node_js:
   - "4.1"
   - "4.0"
+env:
+  global:
+   - GH_REF: github.com/la-veilleuse/la-veilleuse.git
+   - secure: "n9/s25NB5ZGoMubys33F2GMKgKaPLS8Bk0DsdoYGOZVTDRoTV18hdkM4yqT3ZkiM+kQKeBylOja3/4oIquVjveLi30PAYxuOHglQhqeLjaKZexnO+tNUOXvWRIwQRjB8teM7HBW1OUqTaxx+Y4/Wtyb06BOxxZfTqoBGm5plNikK2LEkkLr+E/VmybGX0qhA4CvKm5QnI02I1Fv2yW3+LDT4it+29KJHqzMeu1bYBgWjZtZolzXCGNTEbCdZaal7y0XlS0KzKPUcZ7+KblTwUs7IIRn4/s8DYU1/sMu+Zf+eKNPn+hZ1TMmjEjNcwfDGnogzJYKnqemKAipf8OTkY75PKvGukj9RPlyAg9/MYNUCbNi/nXnqj6adB0Y5tXhk2GAVj+yP1cWbT7J4SHa+UQYJ3Ec6s6IEwVwdo9IW6ipxL5r8Eyjpo1xD8tXxK2TzlIylEbdxsI34XbgFDi/XvyB7xeo1ikp7KyhouXEnJsJeK/6HmP6ajevlNBdsJGqc0Uezv3MGDViVqqCgJUT37DBN+LCPWKkVhDyBtx9FEALhePcL68kZy3XD/MNm01//AZcAyqUsZSdXcEe41hnAs4ba/t++4KboyHIy5NaNLwRARXovHyLUVFCqppTMtOAI8FwJXwx3VLCRSMw3ASIS1cy6qnGdS9l7a/xLYQ0EXwE="
 script:
  - npm run build
  - if [ "$TRAVIS_BRANCH" = "master" ]; then npm run deploy; fi
