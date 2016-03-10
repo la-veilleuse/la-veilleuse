@@ -2,4 +2,6 @@ language: node_js
 node_js:
   - "4.1"
   - "4.0"
-script: npm run build
+script:
+ - npm run build
+ - if [ "$TRAVIS_BRANCH" = "master" ]; npm run deploy; fi
