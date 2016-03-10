@@ -14,6 +14,8 @@ git config user.email "fbe-jgr-travis-ci@users.noreply.github.com"
 git add .
 git commit -m "Deploy to GitHub Pages"
 
+echo "everything is fine until here";
+
 # Force push from the current repo's master branch to the remote
 # repo's gh-pages branch. (All previous history on the gh-pages branch
 # will be lost, since we are overwriting it.) We redirect any output to
