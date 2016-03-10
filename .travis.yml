@@ -4,4 +4,4 @@ node_js:
   - "4.0"
 script:
  - npm run build
- - if [ "$TRAVIS_BRANCH" = "master" ]; npm run deploy; fi
+ - if [ "$TRAVIS_BRANCH" = "master" ]; then npm run deploy; fi
