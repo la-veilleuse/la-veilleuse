@@ -1,4 +1,7 @@
 #!/bin/bash
+## Test this script localy
+## GH_TOKEN=<your password> GH_REF=github.com/la-veilleuse/la-veilleuse.git ./scripts/deploy-to-github-pages.sh
+
 set -e # exit with nonzero exit code if anything fails
 
 # go to the out directory and create a *new* Git repo
@@ -13,8 +16,6 @@ git config user.email "fbe-jgr-travis-ci@users.noreply.github.com"
 # files present with the commit message "Deploy to GitHub Pages".
 git add .
 git commit -m "Deploy to GitHub Pages"
-
-echo "everything is fine until here";
 
 # Force push from the current repo's master branch to the remote
 # repo's gh-pages branch. (All previous history on the gh-pages branch
