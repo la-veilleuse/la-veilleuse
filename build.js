@@ -155,6 +155,13 @@ metalsmithPipeline
         destination: 'styles'
     }));
 
+// Favicon & manifest
+metalsmithPipeline
+    .use(assets({
+        source: 'src/favicon',
+        destination: ''
+    }));
+
 // Minify in production
 if(env === PROD) {
     metalsmithPipeline

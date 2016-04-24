@@ -3,3 +3,6 @@ node_modules
 build
 
 npm-debug.log
+
+# Os specific
+.DS_Store
