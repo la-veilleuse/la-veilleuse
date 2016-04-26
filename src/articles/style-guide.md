@@ -2,6 +2,7 @@
 title: Style Guide
 author: FBE & JGR
 date: 2000-01-01
+draft: true
 ---
 
 Article destiné à tester les styles du site. A laisser en draft.
