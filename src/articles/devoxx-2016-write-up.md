@@ -1,6 +1,6 @@
 ---
 title: Retour sur Devoxx France 2016
-author: Jordane Grenat
+author: <a href="https://twitter.com/JoGrenat">Jordane Grenat</a>
 date: 2016-04-25
 ---
 
@@ -10,7 +10,7 @@ J'y présentais le mercredi un live-coding sur la gestion de l'asynchrone en Jav
 
 <!-- more -->
 
-## L'avant-Devoxx
+### L'avant-Devoxx
 
 Après les délibérations du *Call for Paper*, j'ai ainsi appris qu'un de mes sujets avait été retenu sur la programmation asynchrone en JavaScript depuis ES 2015. J'ai également appris qu'un sujet sur webpack était retenu en back-up, au cas où il y aurait des désistements.
 
@@ -20,7 +20,7 @@ Entre préparation de mes conférences et du jeu et d'un BBL, la période pré-D
 
 Les conférences sont divisées entre plusieurs salles et on ne peut donc pas assister à tout. De façon ingénieuse, on peut renseigner sur le site du CFP la *wish-list* des conférences que l'on souhaite voir, ce qui permet à l'organisation de gérer la taille des salles et les horaires. La richesse du contenu nous donnerait pourtant bien envie de tout voir !
 
-## Une première journée très riche
+### Une première journée très riche
 
 Je suis arrivé le premier jour de bonne heure et me suis retrouvé sur le stand [Viseo](http://www.viseo.com/fr) pour aider à l'installation. Rapidement les premières conférences arrivent, et nous choisissons avec un collègue d'aller à un hands-on sur la programmation réactive avec [Reactor](http://projectreactor.io/) animé par [Sebastien Deleuze](https://twitter.com/@sdeleuze) et [Stéphane Maldini](http://cfp.devoxx.fr/2016/speaker/stephane_maldini). La présentation était à la fois très claire et très intéressante et la partie pratique aidait vraiment à découvrir l'API de Reactor. C'est d'ailleurs le seul reproche que je ferais à cet excellent atelier : on est beaucoup trop centré sur l'API et il aurait été bon de prendre un peu de recul ensuite avec des exercices plus orientés métier. Comme l'ont précisé les deux intervenants, il s'agit d'un atelier en constante évolution, et je ne doute pas que cela finira par venir !
 
@@ -28,7 +28,7 @@ J'ai ensuite assisté à une université sur Spring Boot en partant du principe 
 
 Pour conclure la journée de conférences, j'ai assisté à "Boucle de feedback pour le développeur" par [Christophe Jollivet](http://www.twitter.com/@jollivetc) et [Mickael Debonnaire](http://www.twitter.com/@mdebonnaire). L'idée générale de la présentation est d'améliorer la rapidité du feedback lorsqu'on développe afin de pouvoir tester très rapidement l'effet de notre code et de repérer les erreurs le plus en amont possible. Ils abordent notamment le reload automatique, que ce soit au niveau de l'application web ou de notre code Java via les devtools de Spring. Mais il peut également s'agir d'un feedback via les tests en les exécutant dès qu'un changement est effectué afin d'avoir un retour immédiat dans notre IDE grâce à [Infinitest](https://infinitest.github.io/). De même, grâce aux outils développeur de Chrome, on peut lier nos workspaces à des emplacements physique sur notre disque dur et effectuer des modifications en direct. Enfin, on peut tester plus facilement plusieurs devices en synchronisant nos actions grâce à des outils comme [Browsersync](https://www.browsersync.io/).
 
-## Interlude #1 – Du déroulement de mon premier talk et du repas des speakers
+### Interlude #1 – Du déroulement de mon premier talk et du repas des speakers
 
 Le premier jour était un peu spécial puisqu'il s'agissait du jour de mon premier talk. Premier pour cet évènement, mais premier également en conférence tout court, n'ayant jusqu'à présent pris la parole que sur des formats BBL ou Meetup.
 
@@ -36,7 +36,7 @@ C'est donc un peu stressé que j'ai pris la parole, ayant également royalement 
 
 Le soir était organisé un grand buffet avec tous les speakers ayant répondu à l'appel. Après avoir discuté avec quelques invités, j'ai retrouvé le speaker de la fin de ma conférence, le très sympathique [Philippe Antoine](https://github.com/philippeantoine) – qui m'a du coup présenté à beaucoup de membres de cette communauté Devoxx, ce dont je le remercie chaleureusement ! Ce fut donc une très bonne soirée à échanger sur de nombreux domaines, chacun ayant évidemment sa spécialité !
 
-## Place à la seconde journée
+### Place à la seconde journée
 
 Une présentation assez remarquable à laquelle j'ai pu assister le second jour est celle de [Jean-Laurent de Morlhon](http://www.twitter.com/@morlhon) intitulée "Pourquoi Maurice ne doit surtout pas coder en Go". Il s'agit pour le coup d'une introduction au Go mettant en évidence tous ses défauts, mais de façon assez surprenante également ses qualités. Paradoxalement, bien qu'il m'ait fermement convaincu de ne pas m'y mettre, sa présentation était très intéressante !
 
@@ -44,7 +44,7 @@ J'ai ensuite assisté au quickie de [Jérémie Martinez](http://www.twitter.com/
 
 J'ai également assisté à la conférence "Progressive Web Apps" par [Cyril Balit](http://www.twitter.com/@cbalit) et [Florian Orpelière](http://www.twitter.com/@florpeliere). Bien qu'il s'agissait d'un sujet que je connais déjà bien, la présentation était très complète. Après un bref rappel sur l'évolution des applications mobiles, ils nous proposent de combler ensemble le gouffre entre applications natives et applications web. Cela passe par la création d'application offline-first grâce aux service workers et par leur biais à une fine gestion du cache, mais également par l'optimisation des temps de chargement, l'ajout d'une icône de lancement sur le mobile et le réengagement de l'utilisateur obtenu grâce aux push notifications. Une bonne présentation, peut-être monotone à un ou deux moments mais qui couvre complètement le sujet.
 
-## Interlude #2 : De ce que j'aurais aimé ne pas manquer
+### Interlude #2 : De ce que j'aurais aimé ne pas manquer
 
 Avec un tel nombre de tracks en parallèle, le plus dur est souvent de sacrifier certains sujets en faveur d'autres. Heureusement, les vidéos seront là pour rattraper ces manquements ! Voici un bref récapitulatif des sessions que j'aurai plaisir à découvrir sur internet :
 
@@ -58,7 +58,7 @@ Avec un tel nombre de tracks en parallèle, le plus dur est souvent de sacrifier
 
 Sans surprise donc, pour moi Devoxx reprendra dès la publication des vidéos en ligne !
 
-## Vous reprendrez bien une troisième journée ?
+### Vous reprendrez bien une troisième journée ?
 
 Une journée qui commence sous le signe de la fatigue pour ma part, ayant passé la soirée à peaufiner ma présentation du jour. Et c'est dans cet état d'esprit que j'ai suivi la conférence "Real Real World Haskell" par [Arnaud Bailly](https://twitter.com/@abailly). Si cela pourrait être une excuse pour les difficultés que j'ai eues à suivre, la vérité est toute autre : la syntaxe Haskell est dure à appréhender et pour un premier contact, j'étais définitivement trop novice en Haskell pour comprendre pleinement les exemples. Cela ne m'a cependant pas empêché d'apprécier vraiment cette conférence grâce aux explications du speaker, ce qui me permettra par la suite de réétudier les slides à tête reposée. Haskell est définitivement un langage sur lequel je compte me pencher plus en détails !
 
@@ -71,7 +71,7 @@ Les deux dernières ont été présentées par [Lukas Eder](https://twitter.com/
 Cette présentation m'a particulièrement donné envie d'assister à la suivante, "Get Back in Control of Your SQL with [jOOQ](http://www.jooq.org/)" qui nous présente une façon de reprendre le contrôle de son SQL en Java. Le but est de modéliser en Java un DSL du langage SQL qui connait nos tables grâce à de la génération de code. On peut ainsi faire du code SQL qui ne compilera que s'il est correct. Cette solution est très intéressante et je pense qu'elle peut tout à faire être utilisée en parallèle d'Hibernate, même si tout semble les opposer a priori. Un bon compromis serait de conserver Hibernate pour la plupart des traitements et d'utiliser jOOQ uniquement pour des requêtes complexes.
 
 
-## Interlude #3 : De l'ambiance de Devoxx
+### Interlude #3 : De l'ambiance de Devoxx
 
 L'ambiance d'une conférence est souvent ce qui donne envie ou non d'y revenir. En terme de participants, Devoxx est la plus important à laquelle il m'a été donné d'assister, et j'étais donc assez curieux de ce que cela pouvait donner.
 
@@ -86,6 +86,6 @@ Concernant l'organisation, j'ai été agréablement surpris. Les horaires sont t
 Une ambiance au final très bonne avec quelques petits points qui me laissent parfois sur ma faim – *no pun intended*... Un grand bravo aux organisateurs !
 
 
-## L'heure du bilan
+### L'heure du bilan
 
 Cette conférence Devoxx France 2016 a donc été une expérience très intéressante durant laquelle j'ai pu faire mes premiers pas en tant qu'orateur, mais également apprendre énormément. Signe d'une bonne conférence, j'en suis reparti avec l'envie de mettre en pratique tout ce que j'ai pu découvrir et échanger davantage avec les intervenants. J'ai également rencontré des personnes passionnées – et donc passionnantes – que j'aurai grand plaisir à retrouver sur de futurs évènements !
