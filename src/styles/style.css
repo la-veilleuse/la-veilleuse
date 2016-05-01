@@ -97,11 +97,12 @@ h6 {
 
 a {
     text-decoration: none;
+    border-bottom: 1px dotted currentColor;
     color: hsl(0, 100%, 27%);
 }
 
     a:hover {
-        text-decoration: underline;
+        border-bottom: 1px solid currentColor;
     }
 
 
@@ -124,6 +125,7 @@ a {
         .global-header-title a {
             color: #fafafa;
             text-decoration: none;
+            border-bottom: none;
         }
 
     .global-header-nav {
@@ -177,6 +179,14 @@ a {
         .global-footer-legal-info-link:hover {
             color: #dddddd;
         }
+
+
+
+/** Breadcrumb **/
+.global-breadcrumb {
+    font-style: italic;
+    font-size: 0.9em;
+}
 
 
 
@@ -321,6 +331,10 @@ a {
         padding-left: 1%;
     }
 
+    .markdown li {
+        line-height: 150%;
+    }
+
 .markdown abbr {
     border-bottom: 1px dotted gray;
     cursor: help;
@@ -349,6 +363,12 @@ a {
     margin: 10px 3%;
     padding-left: 1%;
     border-left: 3px solid #ccc;
+}
+
+.markdown p code {
+    padding: 0.2em;
+    font-size: 85%;
+    background-color: rgba(0,0,0,0.04);
 }
 
 .markdown table {
