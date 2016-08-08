@@ -4,7 +4,7 @@ author: FBerthelot
 date: 2016-05-20T12:00:00.000Z
 ---
 
-Dans cette course à l'armement du language JavaScript, il ne faut pas oublier que des API sont aussi en train de se développer - ils en ont du boulot, les éditeurs de navigateurs ! Je vous laisse jeter un oeil à [la liste des API disponibles](https://developer.mozilla.org/fr/docs/Web/API). Ici, nous allons nous intéresser plus particulièrement à la partie des API; celle qui va enfin nous permettre de créer, modifier de la musique dans des pages web : La Web Audio API.
+Dans cette course à l'armement du langage JavaScript, il ne faut pas oublier que des API sont aussi en train de se développer - ils en ont du boulot, les éditeurs de navigateurs ! Je vous laisse jeter un oeil à [la liste des API disponibles](https://developer.mozilla.org/fr/docs/Web/API). Ici, nous allons nous intéresser plus particulièrement à la partie des API; celle qui va enfin nous permettre de créer, modifier de la musique dans des pages web : La Web Audio API.
 
 ## Avant-propos
 
