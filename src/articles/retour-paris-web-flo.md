@@ -2,6 +2,7 @@
 title: Retour sur Paris Web 2016
 author: Florent Berthelot
 date: 2016-10-31
+draft: true
 ---
 
 Chaque année et ce depuis 11 ans à Paris, a lieu une Conférence Majeur : **Paris Web**. La bien nommée tire sa particularité dans le rassemblement des développeurs et des UX/UI designer, bref de tous ceux qui font le web d'aujourd'hui. L'occasion idéal de s'éloigner un peu de ma mission actuel de développeur back-end et de prendre du recul sur le net en général.
