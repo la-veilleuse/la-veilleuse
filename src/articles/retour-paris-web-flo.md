@@ -16,7 +16,7 @@ Dans cet article, je vais faire un retour presque entièrement chronologique de 
 
 Nous le savons tous, Facebook, Google, Amazon, Apple (GAFA) et consorts sont partout sur le web, par le biais notamment de boutons *like*, de scripts d'analyse de trafic, ... Partout et sur quasiment toutes les pages du web ! Nous le savons tous, surtout nous qui travaillons dans le web et pourtant on ne fait rien et nous les intégrons même à nos page web.
 
-[Thibault Jouannic](https://twitter.com/thibaultj), dans sa [conférence de sensibilisation](https://www.miximum.fr/blog/conf-pw-2017/), nous invite à nous poser les bonnes questions. Pour lui – et je partage son avis – toutes les informations des utilisateurs sont sensibles, même celles qui ne le paraissent pas au premier abord. Il a pris son propre exemple : étant freelance, son adresse – qui est aussi celle de sa société – est affichée publiquement sur le web. Oui, mais sa femme travaille dans une prison et les détenus pourraient potentiellement retrouver leur adresse par ce biais. Cet exemple montre bien que des informations aussi "anodine" qu’une adresse peuvent être sensibles. Si toutes les informations sont sensibles, alors pourquoi les rendre accessibles à nous-même ou pire, aux GAFA ?
+[Thibault Jouannic](https://twitter.com/thibaultj), dans sa [conférence de sensibilisation](https://www.miximum.fr/blog/conf-pw-2017/), nous invite à nous poser les bonnes questions. Pour lui – et je partage son avis – toutes les informations des utilisateurs sont sensibles, même celles qui ne le paraissent pas au premier abord. Il a pris son propre exemple : étant freelance, son adresse – qui est aussi celle de sa société – est affichée publiquement sur le web. Oui, mais sa femme travaille dans une prison et les détenus pourraient potentiellement retrouver leur adresse par ce biais. Cet exemple montre bien que des informations aussi "anodines" qu’une adresse peuvent être sensibles. Si toutes les informations sont sensibles, alors pourquoi les rendre accessibles à nous-même ou pire, aux GAFA ?
 
 Personnellement la prochaine fois que je ferai un site avec des données utilisateur à conserver, je me poserai la question : *"Est-il vraiment nécessaire de stocker cette information ?"*. Par exemple, pourquoi ne pas stocker la tranche d’âge plutôt que la date de naissance ? Posons-nous les bonnes questions et respectons au maximum la vie privée, c'est notre devoir !
 
@@ -28,9 +28,9 @@ Personnellement la prochaine fois que je ferai un site avec des données utilisa
 
 Personnellement quand je pense *site web international* je songe instinctivement à la traduction de chaînes de caractères, de devises et de dates. Mais ça, c'était avant qu'[Aurélie Guillaume](https://twitter.com/slig36) nous liste [tout ce qu'il faut penser pour développer un site web 100% international](https://speakerdeck.com/slig36/lancer-son-site-a-linternational-facile-oui-si-lon-pense-a-tout%29).
 
-Je peux vous dire qu'en plus de la simple traduction, il faut parfois pouvoir changer les paramètres de validation d'un formulaire en fonction de la langue. En effet, certain prénom peuvent être codé sur 1 ou 2 caractères dans certaines langues comme le japonais ou le chinois.
+Je peux vous dire qu'en plus de la simple traduction, il faut parfois pouvoir changer les paramètres de validation d'un formulaire en fonction de la langue. En effet, certains prénoms peuvent être codé sur un ou deux caractères dans certaines langues comme le japonais ou le chinois.
 
-Idéalement, la disposition des éléments dans la page pensée de façon à permettre une lecture aisée quel que soit le sens de lecture. Le site marocain de [2M](http://www.2m.ma/) en est un bon exemple ; ils ont choisi d'effectuer un effet miroir complet entre l'arabe et le français.
+Idéalement, la disposition des éléments dans la page doit être pensée de manière à permettre une lecture aisée quel que soit le sens de lecture. Le site marocain de [2M](http://www.2m.ma/) en est un bon exemple ; ils ont choisi d'effectuer un effet miroir complet entre l'arabe et le français.
 Il faut également prendre en compte la loi et les différents contextes géopolitiques. En Chine, il faut obligatoirement un serveur sur leur territoire pour être en règle. Google étant bloqué dans ce pays, nous ne pouvons également pas utiliser leurs services.
 
 Bref, comme d'habitude, il faut penser à tout et je garde précieusement les slides, étant certain qu'ils m’éviteront d'oublier des éléments pour lancer un site hors de mes frontières.
@@ -40,21 +40,21 @@ Bref, comme d'habitude, il faut penser à tout et je garde précieusement les sl
 La Blockchain, c'est tendance, je dirais même sur le début de la courbe du hype et pourtant [François Zaninotto](https://twitter.com/francoisz?lang=fr) a réussi à nous présenter son sujet avec un esprit critique et une vraie expérience sur le sujet.
 Je ne vais pas vous paraphraser sa conférence ici, je vous conseille vivement d'aller jeter un coup d'œil au replay ou même sur ses slides quand ils seront disponibles.
 
-L'ancien CTO de eTF1 - étant actuellement en mission là-bas, j'ai découvert qu'il s'agit du prédecesseur de mon patron actuel en écrivant cet article - nous a permis dans une première partie d'effleurer et d'appréhender ce qu'est la blockchain et dans un second temps nous a expliqué ses défauts. Je m'attarde par la suite sur les défauts, des connaissances sur la blockchain sont nécessaires.
+L'ancien CTO de eTF1 nous a permis dans une première partie d'effleurer et d'appréhender ce qu'est la blockchain et dans un second temps nous a expliqué ses défauts. Je m'attarde par la suite sur les défauts, des connaissances sur la blockchain étant nécessaires avant de poursuivre.
 
-La blockchain, c'est lent. En effet, avant qu'un nouveau document rentre dans le *système* il faut 30 secondes pour le Bitcoin , des fois un mois pour d'autres systèmes. Une fois le bloc dans le *système* il faut qu'il se propage aux autres nœuds du réseau. Quand on compare à ce que l'on a actuellement, plus de 30 secondes pour avoir un nouveau document c'est très lent. On ne peut pas compter sur une application utilisant la blockchain de bout en bout.
+La blockchain, c'est lent. En effet, avant qu'un nouveau document rentre dans le *système* il faut 30 secondes pour le Bitcoin, des fois un mois pour d'autres systèmes. Une fois le bloc dans le *système* il faut qu'il se propage aux autres nœuds du réseau. Quand on compare à ce que l'on a actuellement, plus de 30 secondes pour avoir un nouveau document c'est très lent. On ne peut pas compter sur une application utilisant la blockchain de bout en bout.
 
-La blockchain ne s'applique pas à tout non plus, si l'on vous parle de blockchain en réseau privé, où est l'intérêt ? La blockchain c'est parfait pour obtenir des certificats signés et approuvés par tous, pour gérer une monnaie, pour avoir un système de votes, pour tout ce qui réclame une autorité, quand personne ne se fait pas confiance, mais certainement pas pour tout. L'important est donc de prendre du recul et d'avoir un esprit critique avant de se lancer dedans. François Zaninotto m'a permis d'avoir un peu plus de recul, merci à lui !
+La blockchain ne s'applique pas à tout non plus, si l'on vous parle de blockchain en réseau privé, où est l'intérêt ? La blockchain c'est parfait pour obtenir des certificats signés et approuvés par tous, pour gérer une monnaie, pour avoir un système de votes, pour tout ce qui réclame une autorité, quand personne ne se fait confiance, mais certainement pas pour tout. L'important est donc de prendre du recul et d'avoir un esprit critique avant de se lancer dedans. François Zaninotto m'a permis d'avoir ce recul, merci à lui !
 
 ### Organisez des cryptoparties !
 
 En décembre 2012, à Honolulu au fond d'un magasin, un inconnu prend la première fois la parole en public pour parler de la surveillance que la NSA exerce sur l'ensemble des internautes. Six mois plus tard, cet homme est à Hong-Kong et va dévoiler aux journalistes ce qu'il sait. Cet homme, c'est Edouard Snowden.
 
-Cette histoire montre que tout est parti d'une cryptoparty - ou chiffro-fête en français - à Hawaii. Les Cryptoparty sont des sortes de Meetup ouverts à tous – le but étant justement de sensibiliser le plus grand monde à la sécurité informatique - où l'on parle de divers sujets centrés sur la sécurité informatique. [Xavier Mouton-Dubosc](https://twitter.com/dascritch) nous a alors invités à en organiser ou du moins à y participer.
+Cette histoire montre que tout est parti d'une cryptoparty - ou chiffro-fête en français - à Hawaii. Les Cryptoparties sont des sortes de Meetup ouverts à tous – le but étant justement de sensibiliser le plus grand monde à la sécurité informatique - où l'on parle de divers sujets centrés sur la sécurité informatique. [Xavier Mouton-Dubosc](https://twitter.com/dascritch) nous a alors invités à en organiser ou du moins à y participer.
 
 ### The Invisible Interface: Designing the Screenless Experience
 
-Conférence que je qualifierais comme intéressante et dérangeante tout à la fois. Je m'explique : la première partie était très bien et [Avi Itzkovitch](https://twitter.com/xgmedia) nous a expliqué pourquoi la meilleur expérience utilisateur d'un produit technologique se faisait sans écran. L'exemple des portes des magasins qui s'ouvrent automatiquement quand on s'approche en est un bon exemple, l'utilisateur n'a pas besoin de réfléchir pour ouvrir la porte. Je vous conseille vraiment la première partie de son talk.
+Conférence que je qualifierais d'intéressante et dérangeante. Je m'explique : la première partie était très bien et [Avi Itzkovitch](https://twitter.com/xgmedia) nous a expliqué pourquoi la meilleur expérience utilisateur d'un produit technologique se faisait sans écran. L'exemple des portes des magasins qui s'ouvrent automatiquement quand on s'approche en est un bon exemple, l'utilisateur n'a pas besoin de réfléchir pour ouvrir la porte. Je vous conseille vraiment la première partie de son talk.
 
 Néanmoins, la seconde partie n'était qu'une succession de publicités pour des objets connectés. Ces objet avaient un côté anxiogène de par leur côté intrusif. Skynet est déjà là et ces petits objets nous observent, de quoi devenir méfiant et paranoïaque !
 
@@ -70,7 +70,7 @@ Et oui, en plus d'offrir deux tracks simultanées, Paris Web propose des informe
 
 ### Il n'y a pas que class et id dans la vie
 
-Excellente conférence, une des plus technique que j'aie vu durant ces deux jours. Pour faire très simple, [Gaël Poupard](https://twitter.com/ffoodd_fr?lang=fr) nous a expliqué [pourquoi les intégrateurs n'utilisent quasiment que `class` et `id` comme sélecteurs CSS](http://www.ffoodd.fr/paris-web/index-transcript.html). Historiquement, ces sélecteurs étaient les plus rapides ; aujourd'hui, la différence est trop négligeable pour se priver de ce que nous apportent les autres sélecteurs. Donnons-nous alors à cœur joie d'utiliser les sélecteurs universel, d'attributs, d'adjacence et de parenté et autres joyeusetés très peu utilisés !
+Excellente conférence, une des plus techniques que j'aie vu durant ces deux jours. Pour faire très simple, [Gaël Poupard](https://twitter.com/ffoodd_fr?lang=fr) nous a expliqué [pourquoi les intégrateurs n'utilisent quasiment que `class` et `id` comme sélecteurs CSS](http://www.ffoodd.fr/paris-web/index-transcript.html). Historiquement, ces sélecteurs étaient les plus rapides ; aujourd'hui, la différence est trop négligeable pour se priver de ce que nous apportent les autres sélecteurs. Donnons-nous alors à cœur joie d'utiliser les sélecteurs universel, d'attributs, d'adjacence et de parenté et autres joyeusetés très peu utilisés !
 
 Mais c'est un autre concept présenté qui a retenu toute mon attention : pourquoi ne pas faire une feuille de style CSS qui force les développeurs à remplir du code HTML sémantique et accessible ? Exemple :
 
@@ -86,7 +86,7 @@ Ici, au lieu d'avoir un sélecteur uniquement sur l'élément `html`  on précis
 Et le clou du spectacle d’une première journée bien chargé, la présentation d'[Amélie Boucher](https://twitter.com/amelieboucher?lang=fr) sur le prêt-à-porter du web. Le postulat est simple : aujourd'hui, bon nombre de sites se ressemblent et la tendance est à la hausse. Pourquoi ? Est-ce mal ? Comment faire différent ?
 Sans réellement amener de réponse claire, elle a fait prendre un peu de recul sur le design à l'assemblée. Je vous conseille vraiment de voir le replay quand il sortira de cette conférence. Engagez des UX et des designers, osez faire différent et démarquez-vous !
 
-Cette conférence a permis de renforcer mon envie de m'investir d'avantage dans l'agence numérique [AYA](www.aya-experience.com) qui est en train d'être montée au sein de Zenika, car j'en ai vraiment marre d’enchaîner les projets et de retrouver toujours les mêmes designs.
+Cette conférence a permis de renforcer mon envie de m'investir d'avantage dans l'agence numérique [AYA](www.aya-experience.com) qui est en train d'être montée au sein de Zenika, pour des designs plus assumé !
 
 ## Vendredi
 
@@ -98,7 +98,7 @@ Cette conférence a permis de renforcer mon envie de m'investir d'avantage dans 
 
 J'ai déjà eu l'occasion d’expérimenter des technologies comme **metalsmith** ou **jekyll**, des générateurs de sites statiques. Leur principe est de faire des sites web avec un peu d'HTML, de CSS et de JS. L'édition de contenu se fait alors directement sur Git. C'est très bien, car je suis un développeur et je sais écrire du Markdown, du HTML, du CSS et du JS. Les processus de Github sont en plus parfaitement adaptés : je fais des pull requests avant de publier une nouvelle page en la faisant relire par quelqu’un d'autre. En plus, c'est économique : je peux héberger ce genre de sites sur une Github Page !
 
-Oui, mais ma mère - ou toute autre personne non technique - ne pourrait pas éditer une page sur mon site statique, elle serait perdue. C'est là que [la présentation](http://frank.taillandier.me/presentations/ne-passons-pas-a-cote-des-choses-simples/) de [Frank Taillandier](http://frank.taillandier.me/) et de [Bertrand keller](http://bertrandkeller.info/) m'a permis d'ouvrir ma vision des possibilités offertes par les sites statique à l'infini. En effet, de nouveaux CMS qui se basent sur les API de Github - voire d'un autre VCS - émergent. Cette nouvelle manière de concevoir des sites web économique s'appelle la JAMStack. 
+Oui, mais ma mère - ou toute autre personne non technique - ne pourrait pas éditer une page sur mon site statique, elle serait perdue. C'est là que [la présentation](http://frank.taillandier.me/presentations/ne-passons-pas-a-cote-des-choses-simples/) de [Frank Taillandier](http://frank.taillandier.me/) et de [Bertrand keller](http://bertrandkeller.info/) m'a permis d'ouvrir ma vision des possibilités offertes par les sites statique à l'infini. En effet, de nouveaux CMS qui se basent sur les API de Github - voire d'un autre VCS - émergent. Cette nouvelle manière de concevoir des sites web économique s'appelle la JAMStack (Javascript APIs Markup - JAM). 
 
 Se basant sur les processus d'édition de documents éprouvés de Git et sur les API de services comme Github, ces CMS n'ont même pas besoin de base de données. Tout est statique de bout en bout (certes, sauf les API du VCS) et c'est beaucoup plus simple, non ? **K.I.S.S** !
 
@@ -108,17 +108,17 @@ Se basant sur les processus d'édition de documents éprouvés de Git et sur les
 
 ### HTML5.1 + web Platform APIs
 
-Pour vous dépeindre cette conférence, je vous demande de faire appel à votre mémoire et à votre imagination. Imaginez une documentation W3C de 300 pages ; si vous ne voyez pas imaginez une spécification d'engin militaire révolutionnaire datant des années 1950. Ça sent la poussière, ça ne donne pas envie de lire, mais pourtant le contenu est souvent intéressant. La présentation de Charles McCathieNevile et Léonie Watson - tous deux membres du W3C - suivait le même principe. Aucune mise en forme des slides - s'ils l’avaient fait sur un notepad, ça ne m'aurais pas choqué, une démonstration sur 10 qui marche et pourtant le contenu était vraiment bien !
+Pour vous dépeindre cette conférence, je vous demande de faire appel à votre mémoire et à votre imagination. Imaginez une documentation W3C de 300 pages ; si vous ne voyez pas imaginez une spécification d'engin militaire révolutionnaire datant des années 1950. Ça sent la poussière, ça ne donne pas envie de lire, mais pourtant le contenu est souvent intéressant. La présentation de Charles McCathieNevile et Léonie Watson - tous deux membres du W3C - suivait le même principe. Aucune mise en forme des slides - s'ils l’avaient fait sur un notepad, ça ne m'aurais pas choqué, une démonstration sur dix qui marche et pourtant le contenu était vraiment bien !
 
-Ils ont d’abord fait une revue des nouvelles API disponibles et moi qui adore toutes ces API, qui étendent les possibilités des applications web, j'ai simplement adoré. Au programme, une api de vibration, de gamepad, de paroles, etc. Bref, que du bon !
+Ils ont d’abord fait une revue des nouvelles API disponibles qui étendent les possibilités des applications web. Au programme, une api de vibration, de gamepad, de paroles, etc. Bref, que du bon !
 
 La deuxième partie portait plus sur les évolutions du HTML5, ce qu'ils ont abandonné et ce qu’ils vont améliorer. C'était assez intéressant de se mettre à la place du W3C et de comprendre d'où viennent ces choix de langages.
 
-### Le bon coin, les coulisses d'une refonte graphique
+### Leboncoin, les coulisses d'une refonte graphique
 
 [Jérémie Pereira](https://www.paris-web.fr/orateurs/jeremie-pereira.php) et [Margaux Chenard](https://twitter.com/margauxchenard) nous ont présenté la refonte graphique qu'ils ont menée sur un des sites les plus consultés des français. Leboncoin était un site à l'apparence très vieillotte et surtout absolument pas responsive ! Leur objectif était donc – outre l'amélioration graphique – d'avoir un réel gain de visiteurs sur mobile.
 
-Pour mener à bien cette refonte, j'ai aimé bien des aspects : les tests utilisateurs en conditions réelles (beta publique), la livraison par lot en production (encore actuellement tout le site responsive n'est pas livré) et une première phase de veille - prendre un peu de recul avant de foncer est très important et ce, dans tous les domaines.
+Pour mener à bien cette refonte, j'ai aimé bien des aspects : les tests utilisateurs en conditions réelles (beta publique), la livraison par lots en production (encore actuellement tout le site responsive n'est pas livré) et une première phase de veille - prendre un peu de recul avant de foncer est très important et ce, dans tous les domaines.
 
 Mais ce que j'ai aimé et retenu dans leur approche, c'est qu’ils bénéficié d'une liberté totale de la part de leurs chefs et ce sont donc eux-mêmes qui ont mené de bout en bout cette refonte. Ils ont ainsi composé une équipe pluridisciplinaire pour essayer de rendre le site le plus responsive possible et motiver un maximum de gens dans le projet. La pression n'est pas venue du chef, mais des utilisateurs eux-mêmes et je pense que c'est ce qui manque à beaucoup de projets.
 
