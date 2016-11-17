@@ -317,10 +317,15 @@ a {
 .markdown ul {
     padding-left: 4%;
 }
-    .markdown ul li:before{
-        content: '→';
+    .markdown ul li {
         position: relative;
-        left: -1%;
+    }
+    .markdown ul li:before {
+        content: '→';
+        position: absolute;
+        left: -2%;
+        top: 3px;
+        display: block;
     }
 
 .markdown ol {
