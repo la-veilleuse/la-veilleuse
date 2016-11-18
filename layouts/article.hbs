@@ -1,27 +1,35 @@
 {{>header}}
 
-    <nav class="global-breadcrumb"><a href="/">Accueil</a> &gt; {{title}}</nav>
+    {{#if image}}
+        <img class="illustration-img-article" src="{{baseUrl}}{{image}}" alt="Illustration" role="presentation" />
+    {{/if}}
 
-    <h2>{{title}}</h2>
+    <section class="global-main">
 
-    <main class="markdown">
-    	{{{contents}}}
-	</main>
+        <nav class="global-breadcrumb"><a href="/">Accueil</a> &gt; {{title}}</nav>
 
-    <div class="author"><strong>{{{author}}}</strong></div>
+        <h2>{{title}}</h2>
 
-    <div id="disqus_thread" class="comments"></div>
+        <main class="markdown">
+        	{{{contents}}}
+    	</main>
 
-	<script type="text/javascript">
-	    /*   CONFIGURATION VARIABLES   */
-	    var disqus_shortname = 'poneycase';
+        <div class="author"><strong>{{{author}}}</strong></div>
 
-	    (function() {
-	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-	        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	    })();
-	</script>
-	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        <div id="disqus_thread" class="comments"></div>
+
+    	<script type="text/javascript">
+    	    /*   CONFIGURATION VARIABLES   */
+    	    var disqus_shortname = 'poneycase';
+
+    	    (function() {
+    	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    	        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    	    })();
+    	</script>
+    	<noscript>Pour voir les commentaires, activez le JavaScript (on utilise Disqus).</noscript>
+
+    </section>
 
 {{>footer}}
