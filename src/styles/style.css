@@ -212,10 +212,11 @@ a {
 .writer + .writer {
     margin-top: 3em;
 }
-.writer-picture {
-    width: 50%;
-    border-radius: 100%;
-}
+    .writer-picture {
+        width: 50%;
+        border-radius: 100%;
+    }
+
 
 .writer-name {
     width: 100%;
@@ -230,10 +231,11 @@ a {
         font-size: 1.4rem;
     }
 
-.writer-biography {
-    font-size: 0.8em;
-    font-style: italic;
-}
+    .writer-biography {
+        font-size: 0.8em;
+        font-style: italic;
+        text-align: justify;
+    }
 
 
 /** Footer **/
