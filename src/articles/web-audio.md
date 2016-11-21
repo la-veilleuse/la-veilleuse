@@ -1,6 +1,6 @@
 ---
 title: Web Audio API
-author: FBerthelot
+author: Florent Berthelot
 date: 2016-05-20T12:00:00.000Z
 ---
 

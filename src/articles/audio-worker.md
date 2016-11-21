@@ -1,8 +1,7 @@
 ---
 title: Les Audio Worker
-author: FBerthelot
-date: 2016-25-01T19:00:00.000Z
-draft: true
+author: Florent Berthelot
+date: 2016-06-01T12:00:00.000Z
 ---
 
 Une des fonctionnalités les plus attendues par les développeurs qui font du web audio sont les Audio Workers. Nous allons voir ici ce qu'apportent ces nœuds, en quoi ils sont différents des autres et surtout pourquoi la communauté JS est autant excitée à ce sujet.
@@ -39,7 +38,7 @@ ScriptProcessorNode.onaudioprocess = function(audioProcessingEvent){
 
     //Parcours de l'ensemble du buffer
     for (var j=0; j < inputBuffer.length; j++) {
-      outputData[j] = inputData[j] * 2; //Multiplication de l'amplitude par 2      
+      outputData[j] = inputData[j] * 2; //Multiplication de l'amplitude par 2
     }
   }
 }
