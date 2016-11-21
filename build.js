@@ -35,7 +35,7 @@ const isWatch = args.some(arg => arg.includes('watch'));
 const isServe = args.some(arg => arg.includes('serve'));
 
 const baseUrl = env === PROD
-    ? 'http://la-veilleuse.github.io/la-veilleuse/'
+    ? 'http://laveilleuse.io/'
     : 'http://localhost:8080/';
 
 
