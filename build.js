@@ -1,7 +1,5 @@
 'use strict';
 
-const PROD = 'production';
-
 const Handlebars = require('handlebars');
 const fs = require('fs');
 const Metalsmith = require('metalsmith');
@@ -29,12 +27,12 @@ const moment = require('moment');
 moment.locale('fr');
 
 const buildTarget = './build';
-const env = process.env.NODE_ENV;
+const isTravis = !!process.env.TRAVIS;
 const args = process.argv.slice(2);
 const isWatch = args.some(arg => arg.includes('watch'));
 const isServe = args.some(arg => arg.includes('serve'));
 
-const baseUrl = env === PROD
+const baseUrl = isTravis
     ? 'http://laveilleuse.io/'
     : 'http://localhost:8080/';
 
@@ -163,7 +161,7 @@ metalsmithPipeline
     }));
 
 // Minify in production
-if(env === PROD) {
+if(isTravis) {
     metalsmithPipeline
         .use(cleanCss())
         .use(htmlMinifier());
