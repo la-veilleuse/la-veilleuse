@@ -4,11 +4,11 @@
   "description": "Le blog qui roxx du poney !",
   "main": "index.js",
   "engines": {
-    "node": ">= 4.2.0"
+    "node": ">= 6.3.0"
   },
   "scripts": {
     "build": "node build",
-    "predeploy": "NODE_ENV=production npm run build",
+    "predeploy": "rm -rf build; NODE_ENV=PROD npm run build",
     "deploy": "./scripts/deploy-to-github-pages.sh",
     "start": "node build serve watch",
     "test": "npm run build"
