@@ -4,9 +4,9 @@
 
         {{#each pagination.files}}
         <li class="articles-list-item">
-            <h2 class="articles-list-item-title"><a href="{{baseUrl}}{{this.path}}/" title="{{this.title}}">{{this.title}}</a></h2>
+            <h2 class="articles-list-item-title"><a class="articles-list-item-title-link" href="{{baseUrl}}{{this.path}}/" title="{{this.title}}">{{this.title}}</a></h2>
             <time datetime="{{ dateFormat this.date }}" class="articles-list-item-datetime">{{ dateFormat this.date }}</time>
-            {{{this.less}}}
+            <div class="markdown">{{{this.less}}}</div>
             <div class="articles-list-item-read-more">
                 <a href="{{baseUrl}}{{this.path}}/">Lire l'article</a>
             </div>
