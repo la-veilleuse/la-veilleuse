@@ -399,8 +399,12 @@ a {
 
 
 /** Markdown styles (as we can't style with classes) **/
+.markdown p + p {
+    margin-top: 1em;
+}
+
 .markdown pre {
-    margin: 5px 3%;
+    margin: 5px 2%;
 }
 
 .markdown ul {
@@ -459,10 +463,11 @@ a {
     border-left: 3px solid #ccc;
 }
 
-.markdown p code {
-    padding: 0.2em;
-    font-size: 85%;
-    background-color: rgba(0,0,0,0.04);
+.markdown pre code {
+    margin: 1.5em 0;
+    padding: 0.5em;
+    font-size: 90%;
+    line-height: 140%;
 }
 
 .markdown table {
