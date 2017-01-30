@@ -1,7 +1,7 @@
 ---
 title: A Comprehensive Journey to Elm
 author: <a href="https://twitter.com/JoGrenat">Jordane Grenat</a>
-date: 2016-12-21T00:00:00.000Z
+date: 2016-01-30T15:30:00.000Z
 ---
 
 As many of us, I started building my first websites many years ago, using Dreamweaver and a range of shiny background colors. Ugly background colors. But for me it was undoubtedly the best websites ever!
